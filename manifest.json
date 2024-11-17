@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Filter Review Count",
+    "version": "0.1",
+    "description": "filter amazon search result based on number of results",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background_script.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.amazon.in/s?*"
+            ],
+            "js": [
+                "app.js"
+            ]
+        }
+    ]
+}
